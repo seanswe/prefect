@@ -1,5 +1,5 @@
 Setup
-===========
+------------
 
 Set prefect backend to cloud:
 
