@@ -10,11 +10,9 @@ def use_numpy():
     print(np.arange(10))
 
 
-with Flow(
-    "use_numpy",
-    storage=Docker(python_dependencies=["numpy"]),
-    run_config=DockerRun(),
-) as flow:
+with Flow("use_numpy") as flow:
+    flow.storage = Docker(python_dependencies=["numpy"])
+    flow.run_config = DockerRun()
     use_numpy()
 
 flow.register(project_name="dockerflow")
