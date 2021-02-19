@@ -26,3 +26,17 @@ Launch prefect Docker agent with:
 ```sh
 prefect agent docker start
 ```
+
+Register flow by running python script:
+
+```
+python dockerflow.py
+```
+
+The script should call the flow's `register` method (must include project name):
+
+```python
+flow.register(project_name="myproject")
+```
+
+The flow can be run when the script is run or it can specify a schedule. You must do one of these or start the flow from the UI. 
