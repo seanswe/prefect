@@ -5,10 +5,12 @@ name = "pypi"
 
 [packages]
 prefect = "*"
+numpy = "*"
 
 [dev-packages]
 black = "*"
 pylint = "*"
+pytest = "*"
 
 [requires]
 python_version = "3.8"
